@@ -1,33 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APK Share</title>
+    <title>APK File Download</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
         }
-        .download-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 5px;
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
         }
-        .download-btn:hover {
-            background-color: #0056b3;
+        #download-section {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <h1>Download APK</h1>
-    <p>Click the button below to download the latest version.</p>
-    <a href=""E:\vstro.apk"" class="download-btn" download>Download APK</a>
+    <h1>APK File Download</h1>
+
+    <!-- Download Button -->
+    <div id="download-section">
+        <a id="apk-link" href="E:\vstro.apk" download>
+            <button>Download APK</button>
+        </a>
+    </div>
+
+    <script>
+        // Simulate a condition where the user is authorized to download
+        window.onload = function() {
+            // For demonstration purposes, you can replace this condition with your own logic
+            const isUserAuthorized = true; // Change this based on your condition
+
+            if (isUserAuthorized) {
+                document.getElementById('download-section').style.display = 'block';
+            } else {
+                alert('You are not authorized to download this file.');
+            }
+        };
+    </script>
 </body>
 </html>
